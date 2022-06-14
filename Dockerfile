@@ -1,5 +1,5 @@
 FROM golang:1.18.3-alpine3.16 as build
-COPY main.go .
+COPY go.mod main.go .
 RUN apk add --no-cache git \
   && go install
 
