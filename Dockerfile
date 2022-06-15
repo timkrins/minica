@@ -1,6 +1,7 @@
 FROM golang:1.18.3-alpine3.16 as build
 COPY main.go .
 RUN apk add --no-cache git \
+  && go mod init \
   && go build
 
 FROM alpine:3.16
